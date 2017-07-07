@@ -31,11 +31,11 @@ G_final = nx.Graph()
 G.add_edges_from(input_list)
 G_final.add_edges_from(input_list)
 
-## Creating a list of color sequence corresponding to each of the nodes.
+# Creating a list of color sequence corresponding to each of the nodes.
 color_list = [] * G.number_of_nodes()
 
 
-## Looping until there anre no more edges left in the input_list(list of edges) with the breaking condition on the input_list being empty
+# Looping until there anre no more edges left in the input_list(list of edges) with the breaking condition on the input_list being empty
 while (input_list):
 
     if not input_list:
@@ -105,7 +105,7 @@ for jitesh in sorted(output_list):
     jc += 1
 
 
-## Plotting the final graph and saving it as "image.png"
+# Plotting the final graph and saving it as "image.png"
 nx.draw_networkx(G=G_final, pos=nx.fruchterman_reingold_layout(G_final),node_color=color_list, with_labels=True,cmap=plt.get_cmap('jet'))
 plt.axis("off")
 plt.savefig(final_image)
